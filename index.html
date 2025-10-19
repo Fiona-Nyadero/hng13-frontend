@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HNG Profile Card</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+
+</head>
+<body>
+  <article data-testid="test-profile-card" class="profile-card">
+    <figure>
+      <img
+        src="34b31e02fbcf7f3a262cb94c086baeb5.jpg"
+        alt="Fiona Nyadero smiling outdoors"
+        data-testid="test-user-avatar"
+      />
+    </figure>
+
+    <header>
+      <h2 data-testid="test-user-name">Fiona Nyadero</h2>
+    </header>
+
+    <p data-testid="test-user-bio">
+      I'm just a girl who is striving to build a career in both Technology and Architecture because I can.
+    </p>
+
+    <p data-testid="test-user-timephrase">
+      Current time in milliseconds:
+      <span data-testid="test-user-time" id="time"></span>
+    </p>
+
+    <nav aria-label="Social media links">
+        <ul data-testid="test-user-social-links" class="social-links">
+            <li>
+                <a
+                    href="https://x.com/fiona_nyadero"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-twitter"
+                    aria-label="Twitter"
+                    >
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://github.com/Fiona-Nyadero"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-github"
+                    aria-label="GitHub"
+                    >
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://www.linkedin.com/in/fiona-nyadero/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-linkedin"
+                    aria-label="LinkedIn"
+                    >
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+      <h3>Hobbies</h3>
+      <ul data-testid="test-user-hobbies">
+        <li>Learning new things</li>
+        <li>All forms of design</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Dislikes</h3>
+      <ul data-testid="test-user-dislikes">
+        <li>Dishonesty</li>
+        <li>Incompetence</li>
+        <li>Just plain stupidity</li>
+      </ul>
+    </section>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>

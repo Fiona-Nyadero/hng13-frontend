@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f8f5f7;
+}
+
+.profile-card {
+  width: 360px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+/* Top banner background */
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background:
+    url("overlay2.jpg") center/cover no-repeat, 
+    linear-gradient(135deg, #e04b8c, #c64d8d);
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Avatar styling */
+.profile-card figure {
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
+}
+
+/* Name & Bio */
+h2[data-testid="test-user-name"] {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #fcafa9;
+}
+
+p[data-testid="test-user-bio"] {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0.5rem 1rem 1rem;
+}
+
+p[data-testid="test-user-timephrase"] {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+p span#time {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #777;
+}
+
+/* Stats section (followers, following, collection) */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #e04b8c;
+}
+
+.stat span {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Contact info */
+.contact-info {
+  margin: 1.5rem 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+/* Icons (optional if using emojis) */
+.contact-info a {
+  color: #555;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #e04b8c;
+}
+
+/* Social links */
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #fcafa9;
+  text-decoration: none;
+  font-size: 2.2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: #c64d8d;
+  transform: scale(1.1);
+}
+
+.social-links a:focus {
+  outline: 2px dashed #e04b8c;
+  outline-offset: 3px;
+}
+
+/* Hobbies & dislikes sections */
+section {
+  margin: 1rem 1.5rem;
+  text-align: center;
+}
+
+section ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  display: inline-block;
+  text-align: left;
+  color: #555;
+}
+
+section li {
+  margin: 0.3rem 0;
+}
+
+section h3 {
+  color: #fcafa9;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .profile-card {
+    width: 90%;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
